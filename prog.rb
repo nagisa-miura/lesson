@@ -1,8 +1,18 @@
 require "./prog_class"
 
-hero = Caracter.new
+def title_call
+  puts "rubyクエスト"
+  yield
+end
+subtitle = "〜rubyでつくるRPG〜"
 
-Monster.new
+title_call{puts subtitle}
 
-hero.battle
+main = MainMonster.new
+main.create
 
+sub = SubMonster.new
+sub.create
+
+try = Enemy.new
+try.encount
